@@ -2,16 +2,18 @@
 //  AppDelegate.swift
 //  1.1_Einfuehrung_in_Xcode
 //
-//  Created by Benjamin Hübner on 25.07.22.
+//  Created by Syntax Institut on 25.07.22.
 //
 
 import UIKit
 
 @main
+
+// Das AppDelegate ist das "Herz" deiner App. Es kann deine als ganzes ansprechen und ist quasi der Einstiegspunkt
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+// Wird bei jedem App Start aufgerufen
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

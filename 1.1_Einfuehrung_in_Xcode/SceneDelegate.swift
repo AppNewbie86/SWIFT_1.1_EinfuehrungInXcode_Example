@@ -2,11 +2,13 @@
 //  SceneDelegate.swift
 //  1.1_Einfuehrung_in_Xcode
 //
-//  Created by Benjamin Hübner on 25.07.22.
+//  Created by Syntax Institut on 25.07.22.
 //
 
 import UIKit
 
+// Das SceneDelegate managed deine Scenes
+// Eine Scene ist sogesehen das angezeigte Fenster. Auf dem iPhone kann jede App aktuell nur ein Fenster geöffnet haben, auf dem iPad sind hier mittlerweile aber auch mehrere Fenster möglich. Jedes davon ist dann eine "Scene"
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?

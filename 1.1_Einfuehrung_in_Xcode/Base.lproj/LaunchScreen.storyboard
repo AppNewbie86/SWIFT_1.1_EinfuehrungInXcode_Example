@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,15 +13,76 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Quy-3j-C4z">
+                                <rect key="frame" x="27" y="193" width="361" height="166"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="166" id="Hkh-MR-78M"/>
+                                </constraints>
+                                <string key="text">Dieser Screen wird dir beim Appstart, also während deine App noch lädt, angezeigt. Sie ist darum meist nur kurz zu sehen. Viele Apps verwenden hier oft nur eine einfarbige Fläche oder das eigene Logo.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SyntaxLogoLight" translatesAutoresizingMaskIntoConstraints="NO" id="4cD-gx-02m">
+                                <rect key="frame" x="117" y="367.5" width="180" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="2cA-c5-xbA"/>
+                                    <constraint firstAttribute="height" constant="161" id="jCC-F1-eGj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dies ist ein ImageView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jb-T3-fgK">
+                                <rect key="frame" x="27" y="536" width="361" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="zwU-61-Wwt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Alle Bilder die im Projekt vorhanden sind, findest du links im Project Navigator unter &quot;Assets&quot;." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knW-8A-5Gy">
+                                <rect key="frame" x="27" y="572" width="361" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="PMs-hJ-jny"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="knW-8A-5Gy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="ACJ-3R-HrN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9jb-T3-fgK" secondAttribute="trailing" constant="26" id="APg-u0-oDc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="knW-8A-5Gy" secondAttribute="trailing" constant="26" id="CUY-ci-rEY"/>
+                            <constraint firstItem="9jb-T3-fgK" firstAttribute="top" secondItem="4cD-gx-02m" secondAttribute="bottom" constant="7.5" id="DYN-nd-Rp5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Quy-3j-C4z" secondAttribute="trailing" constant="26" id="HpC-Dd-I9B"/>
+                            <constraint firstItem="4cD-gx-02m" firstAttribute="top" secondItem="Quy-3j-C4z" secondAttribute="bottom" constant="8.5" id="ZaL-V4-Jiv"/>
+                            <constraint firstItem="9jb-T3-fgK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="fB7-M5-jbn"/>
+                            <constraint firstItem="Quy-3j-C4z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="sUk-5z-9cz"/>
+                            <constraint firstItem="knW-8A-5Gy" firstAttribute="top" secondItem="9jb-T3-fgK" secondAttribute="bottom" constant="8" symbolic="YES" id="wel-Wy-7hz"/>
+                            <constraint firstItem="4cD-gx-02m" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="yYe-zy-Q95"/>
+                            <constraint firstItem="4cD-gx-02m" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ysv-lQ-oP7"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SyntaxLogoLight" width="320" height="320"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
